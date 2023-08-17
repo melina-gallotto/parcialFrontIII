@@ -32,7 +32,7 @@ const Form = () => {
             onChange={(event) => setUsuario({...usuario, peliculaFavorita: event.target.value})}
         />
         <button type="submit" onClick={handleSubmit}>Enviar</button>
-        {show && <Card />}
+        {show && <Card props={usuario}/>}
         {error && <h4 style={{color: 'red'}}>Por favor chequea que la información sea correcta</h4>}
     </div>
   )
